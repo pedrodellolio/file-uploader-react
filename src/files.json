@@ -1,0 +1,159 @@
+{
+    "entries": [
+        {
+            "name": "root",
+            "parent": "",
+            "sizeInBytes": 0,
+            "lastModified": "2023-05-17",
+            "type": "folder",
+            "entries": [
+                {
+                    "name": "file_01.txt",
+                    "parent": "/root",
+                    "sizeInBytes": 10000000,
+                    "lastModified": "2023-05-17",
+                    "type": "file",
+                    "entries": null
+                },
+                {
+                    "name": "file_01.txt",
+                    "parent": "/root",
+                    "sizeInBytes": 10000000,
+                    "lastModified": "2023-05-17",
+                    "type": "file",
+                    "entries": null
+                },
+                {
+                    "name": "backup",
+                    "parent": "/root",
+                    "sizeInBytes": 10000000,
+                    "lastModified": "2023-05-17",
+                    "type": "folder",
+                    "entries": [
+                        {
+                            "name": "pedro",
+                            "parent": "/root/backup",
+                            "sizeInBytes": 10000000,
+                            "lastModified": "2023-05-17",
+                            "type": "folder",
+                            "entries": null
+                        },
+                        {
+                            "name": "file_01.txt",
+                            "parent": "/root/backup",
+                            "sizeInBytes": 10000000,
+                            "lastModified": "2023-05-17",
+                            "type": "file",
+                            "entries": null
+                        },
+                        {
+                            "name": "file_01.txt",
+                            "parent": "/root/backup",
+                            "sizeInBytes": 10000000,
+                            "lastModified": "2023-05-17",
+                            "type": "file",
+                            "entries": null
+                        },
+                        {
+                            "name": "file_01.txt",
+                            "parent": "/root/backup",
+                            "sizeInBytes": 10000000,
+                            "lastModified": "2023-05-17",
+                            "type": "file",
+                            "entries": null
+                        },
+                        {
+                            "name": "file_01.txt",
+                            "parent": "/root/backup",
+                            "sizeInBytes": 10000000,
+                            "lastModified": "2023-05-17",
+                            "type": "file",
+                            "entries": null
+                        },
+                        {
+                            "name": "file_01.txt",
+                            "parent": "/root/backup",
+                            "sizeInBytes": 10000000,
+                            "lastModified": "2023-05-17",
+                            "type": "file",
+                            "entries": null
+                        },
+                        {
+                            "name": "file_01.txt",
+                            "parent": "/root/backup",
+                            "sizeInBytes": 10000000,
+                            "lastModified": "2023-05-17",
+                            "type": "file",
+                            "entries": null
+                        }
+                    ]
+                },
+                {
+                    "name": "teste",
+                    "parent": "/root",
+                    "sizeInBytes": 10000000,
+                    "lastModified": "2023-05-17",
+                    "type": "folder",
+                    "entries": [
+                        {
+                            "name": "gabi",
+                            "parent": "/root/teste",
+                            "sizeInBytes": 10000000,
+                            "lastModified": "2023-05-17",
+                            "type": "folder",
+                            "entries": null
+                        },
+                        {
+                            "name": "file_01.txt",
+                            "parent": "/root/teste",
+                            "sizeInBytes": 10000000,
+                            "lastModified": "2023-05-17",
+                            "type": "file",
+                            "entries": null
+                        },
+                        {
+                            "name": "file_01.txt",
+                            "parent": "/root/teste",
+                            "sizeInBytes": 10000000,
+                            "lastModified": "2023-05-17",
+                            "type": "file",
+                            "entries": null
+                        },
+                        {
+                            "name": "file_01.txt",
+                            "parent": "/root/teste",
+                            "sizeInBytes": 10000000,
+                            "lastModified": "2023-05-17",
+                            "type": "file",
+                            "entries": null
+                        },
+                        {
+                            "name": "file_01.txt",
+                            "parent": "/root/teste",
+                            "sizeInBytes": 10000000,
+                            "lastModified": "2023-05-17",
+                            "type": "file",
+                            "entries": null
+                        },
+                        {
+                            "name": "file_01.txt",
+                            "parent": "/root/teste",
+                            "sizeInBytes": 10000000,
+                            "lastModified": "2023-05-17",
+                            "type": "file",
+                            "entries": null
+                        },
+                        {
+                            "name": "file_01.txt",
+                            "parent": "/root/teste",
+                            "sizeInBytes": 10000000,
+                            "lastModified": "2023-05-17",
+                            "type": "file",
+                            "entries": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
