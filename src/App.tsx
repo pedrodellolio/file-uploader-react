@@ -22,10 +22,12 @@ function App() {
       {files && (
         <div className="flex">
           <SideNav entries={files} />
-          <section id="files" className="w-full">
-            <TopNav />
-            <FileList files={files} title={"All Files"} />
-          </section>
+          <div className="w-full bg-blue-700">
+            <TopNav entries={entries} />
+            <section id="files">
+              <FileList files={files} title={"All Files"} setFiles={setFiles} />
+            </section>
+          </div>
         </div>
       )}
     </>
