@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { entries as json } from "./files.json";
 import TopNav from "./components/TopNav";
 import SideNav from "./components/SideNav";
 import FileList from "./components/FileList";
