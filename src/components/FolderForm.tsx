@@ -86,9 +86,9 @@ function FolderForm(props: Props) {
   }
 
   return props.isOpen ? (
-    <tr className="bg-gray-100">
+    <tr className="bg-gray-800">
       <td className="py-3 px-3 text-black flex items-center gap-3">
-        <span className="text-orange-400 material-symbols-rounded text-md">
+        <span className="text-blue-100 material-symbols-rounded text-md">
           folder
         </span>
         <form
@@ -96,7 +96,7 @@ function FolderForm(props: Props) {
           onSubmit={(e) => handleFormSubmit(e)}
         >
           <input
-            className="rounded-sm"
+            className="rounded-sm bg-blue-800 text-white p-1"
             type="text"
             name="itemName"
             id="itemName"
@@ -104,7 +104,7 @@ function FolderForm(props: Props) {
           />
           <button
             type="submit"
-            className="text-gray-600 hover:text-gray-800"
+            className="text-gray-300 hover:text-gray-400"
             disabled={
               props.entries
                 ?.find((entry) => entry.name === props.currentDirectoryPath)
@@ -115,7 +115,7 @@ function FolderForm(props: Props) {
           </button>
           <button
             type="button"
-            className="text-gray-600 hover:text-gray-800"
+            className="text-gray-300 hover:text-gray-400"
             onClick={() => props.setIsOpen(false)}
           >
             Cancel
