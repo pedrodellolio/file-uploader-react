@@ -1,19 +1,17 @@
 import { Combobox, Transition } from "@headlessui/react";
 import { useState, Fragment } from "react";
 import { Entry } from "../App";
+import { useDirectory } from "../hooks/useDirectory";
 
-interface Props {
-  entries: Entry[];
-}
-
-function ComboBox(props: Props) {
+function ComboBox() {
+  const directoryContext = useDirectory();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedEntry, setSelectedEntry] = useState<Entry>();
 
   const filteredEntries = searchTerm
-    ? filterEntriesByName(props.entries, searchTerm)
+    ? filterEntriesByName(directoryContext.currentEntryChildren, searchTerm)
     : [];
-    
+
   function filterEntriesByName(entries: Entry[], searchTerm: string) {
     const filtered: Entry[] = [];
 

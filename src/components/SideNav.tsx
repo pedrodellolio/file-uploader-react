@@ -1,13 +1,14 @@
-import { useState } from "react";
-import { Entry } from "../App";
-
-interface SideNavProps {
-  entries: Entry[];
-}
+import { useEffect, useState } from "react";
+import { getEntryFullPath } from "../api/apiService";
+import { Link, useNavigate } from "react-router-dom";
+import { Entry, EntryType } from "../routes/Root";
 
 interface FolderItemProps {
   folder: Entry;
   level?: number;
+}
+interface SideNavProps {
+  entries: Entry[];
 }
 
 function SideNav(props: SideNavProps) {
@@ -16,9 +17,11 @@ function SideNav(props: SideNavProps) {
       <div>
         <h1 className="font-medium text-white">Explorer</h1>
         <ul className="mt-3">
-          {props.entries.map((item, index) => (
-            <li key={index}>
-              {item.type === "folder" && <FolderItem folder={item} level={0} />}
+          {props.entries.map((item) => (
+            <li key={item.id}>
+              {item.type === EntryType.Folder && (
+                <FolderItem folder={item} level={0} />
+              )}
             </li>
           ))}
         </ul>
@@ -29,13 +32,22 @@ function SideNav(props: SideNavProps) {
 
 function FolderItem(props: FolderItemProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [folderFullPath, setFolderFullPath] = useState("");
   const { folder, level = 0 } = props;
+
+  useEffect(() => {
+    getEntryFullPath(folder).then((path) => {
+      setFolderFullPath(path.replace(/\//g, "%"));
+    });
+  }, []);
 
   const toggleOpen = () => {
     setIsOpen(!isOpen);
   };
 
-  const hasSubFolders = folder.entries?.some((item) => item.type === "folder");
+  const hasSubFolders = folder.entries?.some(
+    (item) => item.type === EntryType.Folder
+  );
 
   const indentLevel = level * 35;
 
@@ -47,7 +59,8 @@ function FolderItem(props: FolderItemProps) {
           style={{ paddingLeft: `${indentLevel}px` }}
           className="flex flex-row items-center text-sm"
         >
-          <div
+          <Link
+            to={folderFullPath}
             className={`cursor-pointer flex flex-row items-center gap-1 hover:text-white`}
           >
             {hasSubFolders ? (
@@ -61,7 +74,7 @@ function FolderItem(props: FolderItemProps) {
               {isOpen ? "folder_open" : "folder"}
             </span>
             {folder.name}
-          </div>
+          </Link>
         </span>
         {/* <a className="cursor-pointer material-symbols-rounded text-sm hover:bg-blue-600 p-1">
           more_horiz
@@ -69,9 +82,9 @@ function FolderItem(props: FolderItemProps) {
       </div>
       {isOpen && (
         <ul>
-          {folder.entries?.map((item, index) => (
-            <li key={index}>
-              {item.type === "folder" && (
+          {folder.entries?.map((item) => (
+            <li key={item.id}>
+              {item.type === EntryType.Folder && (
                 <FolderItem folder={item} level={level + 1} />
               )}
             </li>
