@@ -21,6 +21,7 @@ export enum EntryType {
 
 export async function loader() {
   return await getAllEntries(true);
+  // return null;
 }
 
 function Root() {

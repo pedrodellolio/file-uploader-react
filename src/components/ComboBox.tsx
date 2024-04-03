@@ -1,7 +1,7 @@
 import { Combobox, Transition } from "@headlessui/react";
 import { useState, Fragment } from "react";
-import { Entry } from "../App";
 import { useDirectory } from "../hooks/useDirectory";
+import { Entry } from "../routes/Root";
 
 function ComboBox() {
   const directoryContext = useDirectory();

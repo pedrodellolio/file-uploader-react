@@ -45,12 +45,16 @@ export async function createEntry(file: File, directoryPath: string) {
 
 export async function getChildrenEntries(path: string) {
   console.log(path);
-  const response = await axios.get(`${BASE_URL}/file/GetEntryChildren?path=${path}`);
+  const response = await axios.get(
+    `${BASE_URL}/file/GetEntryChildren?path=${path}`
+  );
   return response.data as Entry[];
 }
 
 export async function getAllEntries(onlyFolders: boolean) {
-  const response = await axios.get(`${BASE_URL}/file/Entry?onlyFolders=${onlyFolders}`);
+  const response = await axios.get(
+    `${BASE_URL}/file/Entry?onlyFolders=${onlyFolders}`
+  );
   return response.data as Entry[];
 }
 
@@ -60,7 +64,9 @@ export async function getEntry(path: string) {
 }
 
 export async function getEntryFullPath(entry: Entry) {
-  const response = await axios.get(`${BASE_URL}/file/EntryFullPath/${entry.id}`);
+  const response = await axios.get(
+    `${BASE_URL}/file/EntryFullPath/${entry.id}`
+  );
   return response.data as string;
 }
 

@@ -17,7 +17,7 @@ function SideNav(props: SideNavProps) {
       <div>
         <h1 className="font-medium text-white">Explorer</h1>
         <ul className="mt-3">
-          {props.entries.map((item) => (
+          {props.entries?.map((item) => (
             <li key={item.id}>
               {item.type === EntryType.Folder && (
                 <FolderItem folder={item} level={0} />
